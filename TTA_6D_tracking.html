@@ -140,10 +140,11 @@
 		<img width=1000 src="TTA_framework/framework.jpeg">
 	</div>
 		<p>
-				The proposed framework for keypoints detection. It begins by extracting the fused appearance and geometric features of the target
-				object from the cropped RGB and the target point cloud. Subsequently, we utilise self-attention and cross-attention to enhance
-				points features and obtain more distinguished intra-frame and inter-frame features. Following, we combine points features into
-				one global feature using a multilayer perceptron (MLP) layer and the 3D keypoints are estimated through a fully connected (FC) layer.
+				The proposed framework for keypoints detection. In data processing, we crop RGB images and depth images using semantic mask information
+				and lift cropped depth to the point cloud. In 3D keypoint detection, we extract the fused appearance and geometric features of the target
+				object from the cropped RGB and the target point cloud. Subsequently, we utilise self-attention and cross-attention to enhance points
+				features and obtain more distinguished intra-frame and inter-frame features. Following, we combine points features into one global feature
+				using a multilayer perceptron (MLP) layer and the 3D keypoints are estimated through a fully connected (FC) layer.
 		</p>
 
 
@@ -279,64 +280,56 @@
 			</tr>
 		</table>
 
+	<br>
+	<br>
 
-		<h2 class="Tracking results" style="text-align: left;">Adaptation results</h2>
+	<h2 class="Tracking results" style="text-align: left;">Adaptation results</h2>
 		<table align="center" style="border:0px;padding-left:0px">
 			<tr>
-				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
-					<video width="400" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/car_model.mp4" type="video/mp4" >Your browser does not support the video tag.
-					</video>
-				</td>
-				</td>
 			</tr>
+			<p>
+				 Red bounding box means ground truth, black bounding box denotes the results obtained by before adaptation, while green bounding box represents the results obtained by after adaptation.
+			</p>
 			<tr>
 				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
-					<video width="400" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/computer_mouse.mp4" type="video/mp4" >Your browser does not support the video tag.
+					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/car_model.mp4" type="video/mp4" >Your browser does not support the video tag.
 					</video>
 				</td>
-				</td>
-			</tr>
-			<tr>
-			`<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
-					<video width="400" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/cracker_box.mp4" type="video/mp4" >Your browser does not support the video tag.
-					</video>
-				</td>
-				</td>
-			</tr>
-			<tr>
+
 				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
-					<video width="400" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/measuring_tape.mp4" type="video/mp4" >Your browser does not support the video tag.
+					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/computer_mouse.mp4" type="video/mp4" >Your browser does not support the video tag.
 					</video>
 				</td>
-				</td>
-			</tr>
-						<tr>
 				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
-					<video width="400" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/remote_control.mp4" type="video/mp4" >Your browser does not support the video tag.
+					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/cracker_box.mp4" type="video/mp4" >Your browser does not support the video tag.
 					</video>
 				</td>
-				</td>
 			</tr>
-						<tr>
 				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
-					<video width="400" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/scale.mp4" type="video/mp4" >Your browser does not support the video tag.
+					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/measuring_tape.mp4" type="video/mp4" >Your browser does not support the video tag.
 					</video>
 				</td>
-				</td>
-			</tr>
-						<tr>
 				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
-					<video width="400" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/stapler.mp4" type="video/mp4" >Your browser does not support the video tag.
+					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/remote_control.mp4" type="video/mp4" >Your browser does not support the video tag.
 					</video>
 				</td>
+				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
+					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/scale.mp4" type="video/mp4" >Your browser does not support the video tag.
+					</video>
 				</td>
 			</tr>
-			<tr>
-				<td width="30%" style="border:0px;padding:0px" align="center">Red bounding box means ground truth, black bounding box denotes the results obtained by before adaptation, while green bounding box represents the results obtained by after adaptation. </td>
+						</tr>
+				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
+					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/stapler.mp4" type="video/mp4" >Your browser does not support the video tag.
+					</video>
+				</td>
+			</tr>
+
 			</tr>
 			</tr>
 		</table>
-
+		<br>
+		<br>
 
 	<h2 style="text-align: left;">Contacts</h2>
 	<p>
