@@ -108,6 +108,32 @@
     .border-right {
         border-right: 1px solid #000;
     }
+	    .button-container {
+      margin: 10px;
+    }
+    .button {
+      padding: 10px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .selected {
+      background-color: #f0f0f0;
+    }
+    .media-container {
+      margin-top: 20px;
+    }
+    .media-item {
+      display: none;
+    }
+    .media-item.active {
+      display: block;
+    }
+
+	.color1{ color:red}
+
+	.color2{ color:#F00}
+
+	.color3{ color:#FF0000}
 </style>
 
 <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
@@ -115,8 +141,9 @@
 <body>
 	<div class="center-justified" style="width:1000px;">
 		<h1>Test-time Adaptation 6D Pose Tracking</h1>
-		<h2>Long Tian, Andrea Cavallaro, Changjae Oh</h2>
+		<h2>Long Tian, Changjae Oh, Andrea Cavallaro</h2>
 		<h3> Centre for Intelligent Sensing, Queen Mary University of London, United Kingdom </h3>
+		<h3> Idiap Research Institute, École Polytechnique Fédérale de Lausanne, Switzerland </h3>
 	</div>
 
 <div class="center-justified">
@@ -341,62 +368,158 @@
 	<br>
 
 	<h2 class="Tracking results" style="text-align: left;">Adaptation results</h2>
-		<table align="center" style="border:0px;padding-left:0px">
-			<tr>
-			</tr>
-			<p>
-				 Red bounding box means ground truth, black bounding box denotes the results obtained by before adaptation, while green bounding box represents the results obtained by after adaptation.
-			</p>
-			<tr>
-				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
-					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/car_model.mp4" type="video/mp4" >Your browser does not support the video tag.
-					</video>
-				</td>
+		<h3>please select one pre-trained model</h3>
+<!--		<table align="center" style="border:0px;padding-left:0px">-->
+<!--			<tr>-->
+<!--			</tr>-->
+<!--			<p>-->
+<!--				 Red bounding box means ground truth, black bounding box denotes the results obtained by before adaptation, while green bounding box represents the results obtained by after adaptation.-->
+<!--			</p>-->
+<!--			<tr>-->
+<!--				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">-->
+<!--					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/pre-trained_laptop/car_model.mp4" type="video/mp4" >Your browser does not support the video tag.-->
+<!--					</video>-->
+<!--				</td>-->
 
-				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
-					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/computer_mouse.mp4" type="video/mp4" >Your browser does not support the video tag.
-					</video>
-				</td>
-				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
-					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/cracker_box.mp4" type="video/mp4" >Your browser does not support the video tag.
-					</video>
-				</td>
-			</tr>
-				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
-					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/measuring_tape.mp4" type="video/mp4" >Your browser does not support the video tag.
-					</video>
-				</td>
-				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
-					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/remote_control.mp4" type="video/mp4" >Your browser does not support the video tag.
-					</video>
-				</td>
-				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
-					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/scale.mp4" type="video/mp4" >Your browser does not support the video tag.
-					</video>
-				</td>
-			</tr>
+<!--				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">-->
+<!--					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/pre-trained_laptop/computer_mouse.mp4" type="video/mp4" >Your browser does not support the video tag.-->
+<!--					</video>-->
+<!--				</td>-->
+<!--				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">-->
+<!--					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/pre-trained_laptop/cracker_box.mp4" type="video/mp4" >Your browser does not support the video tag.-->
+<!--					</video>-->
+<!--				</td>-->
+<!--			</tr>-->
+<!--				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">-->
+<!--					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/pre-trained_laptop/measuring_tape.mp4" type="video/mp4" >Your browser does not support the video tag.-->
+<!--					</video>-->
+<!--				</td>-->
+<!--				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">-->
+<!--					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/pre-trained_laptop/remote_control.mp4" type="video/mp4" >Your browser does not support the video tag.-->
+<!--					</video>-->
+<!--				</td>-->
+<!--				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">-->
+<!--					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/pre-trained_laptop/scale.mp4" type="video/mp4" >Your browser does not support the video tag.-->
+<!--					</video>-->
+<!--				</td>-->
+<!--			</tr>-->
+<!--						</tr>-->
+<!--				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">-->
+<!--					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/pre-trained_laptop/stapler.mp4" type="video/mp4" >Your browser does not support the video tag.-->
+<!--					</video>-->
+<!--				</td>-->
+<!--			</tr>-->
+
+<!--			</tr>-->
+<!--			</tr>-->
+<!--		</table>-->
+<!--		<br>-->
+<!--		<br>-->
+	<div style="text-align: center;">
+		<div class="container">
+			<button class="button" onclick="showMedia(1)">bottle-pretrained</button>
+			<button class="button" onclick="showMedia(2)">bowl-pretrained</button>
+			<button class="button" onclick="showMedia(3)">camera-pretrained</button>
+			<button class="button" onclick="showMedia(4)">can-pretrained</button>
+			<button class="button" onclick="showMedia(5)">laptop-pretrained</button>
+			<button class="button" onclick="showMedia(6)">mug-pretrained</button>
+		</div>
+	</div>
+
+	<div class="media-container">
+		<div class="media-item" id="media5">
+			<table align="center" style="border:0px;padding-left:0px">
+				<tr>
+					<th>
+					<p>The model is pre-trained on laptop category</p>
+					<p>Adapt to different instance according</p>
+					<div style="text-align: center;">
+						<img width=465 src="TTA_videos/Adaptation_results/pre-trained_laptop/laptop_ada_results.jpeg" alt="Laptop-pretrained">
+					 </div>
+					</th>
+
+					<th>
+
+					<table align="center" style="border:0px;padding-left:0px">
+						<p>Red bounding box: ground truth; black bounding box: before adaptation</p>
+						<p>green bounding box: after adaptation.</p>
+						<tr>
+						<th>
+							<td style="text-align: center;">
+								<video width="300" controls autoplay muted loop style="vertical-align: middle;"> <source src="TTA_videos/Adaptation_results/pre-trained_laptop/car_model.mp4" type="video/mp4"> Your browser does not support the video tag.
+								</video>
+							</td>
+						</th>
+						<th>
+							<td style="text-align: center;">
+								<video width="300" controls autoplay muted loop style="vertical-align: middle;"> <source src="TTA_videos/Adaptation_results/pre-trained_laptop/computer_mouse.mp4" type="video/mp4"> Your browser does not support the video tag.
+								</video>
+							</td>
 						</tr>
-				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
-					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/Adaptation_results/stapler.mp4" type="video/mp4" >Your browser does not support the video tag.
-					</video>
-				</td>
-			</tr>
 
-			</tr>
-			</tr>
-		</table>
-		<br>
-		<br>
+						<tr>
+						<th>
+							<td style="text-align: center;">
+								<video width="300" controls autoplay muted loop style="vertical-align: middle;"> <source src="TTA_videos/Adaptation_results/pre-trained_laptop/cracker_box.mp4" type="video/mp4"> Your browser does not support the video tag.
+								</video>
+							</td>
+						</th>
+						<th>
+							<td style="text-align: center;">
+								<video width="300" controls autoplay muted loop style="vertical-align: middle;"> <source src="TTA_videos/Adaptation_results/pre-trained_laptop/measuring_tape.mp4" type="video/mp4"> Your browser does not support the video tag.
+								</video>
+							</td>
+						</tr>
+
+						<tr>
+						<th>
+							<td style="text-align: center;">
+								<video width="300" controls autoplay muted loop style="vertical-align: middle;"> <source src="TTA_videos/Adaptation_results/pre-trained_laptop/remote_control.mp4" type="video/mp4"> Your browser does not support the video tag.
+								</video>
+							</td>
+						</th>
+						<th>
+							<td style="text-align: center;">
+								<video width="300" controls autoplay muted loop style="vertical-align: middle;"> <source src="TTA_videos/Adaptation_results/pre-trained_laptop/scale.mp4" type="video/mp4"> Your browser does not support the video tag.
+								</video>
+							</td>
+						</th>
 
 
-    <div class="buttons">
-      <button class="video-btn" data-video="video1.mp4">Pre-trained bottle</button>
-      <button class="video-btn" data-video="video2.mp4">Pre-trained bowl</button>
-      <button class="video-btn" data-video="video3.mp4">Pre-trained camera</button>
-      <button class="video-btn" data-video="video4.mp4">Pre-trained can</button>
-      <button class="video-btn" data-video="video5.mp4">Pre-trained laptop</button>
-      <button class="video-btn" data-video="video6.mp4">Pre-trained mug</button>
-    </div>
+						</tr>
+
+						<tr>
+						<th>
+							<td style="text-align: center;">
+								<video width="300" controls autoplay muted loop style="vertical-align: middle;"> <source src="TTA_videos/Adaptation_results/pre-trained_laptop/stapler.mp4" type="video/mp4"> Your browser does not support the video tag.
+								</video>
+							</td>
+						</th>
+
+						</tr>
+
+						</th>
+					</table>
+					</th>
+				</tr>
+
+
+
+			</table>
+		</div>
+	</div>
+
+	<script>
+    function showMedia(imageNumber) {
+      // Hide all media items
+      const mediaItems = document.querySelectorAll('.media-item');
+      mediaItems.forEach(item => item.classList.remove('active'));
+
+      // Show the selected media item
+      const selectedMedia = document.getElementById(`media${imageNumber}`);
+      selectedMedia.classList.add('active');
+    }
+    </script>
 
 
 	<h2 style="text-align: left;">Contacts</h2>
