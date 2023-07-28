@@ -139,7 +139,8 @@
 		<h1>Test-time Adaptation 6D Pose Tracking</h1>
 		<h2>Long Tian, Changjae Oh, Andrea Cavallaro</h2>
 		<h3> Centre for Intelligent Sensing, Queen Mary University of London, United Kingdom </h3>
-		<h3> Idiap Research Institute, École Polytechnique Fédérale de Lausanne, Switzerland </h3>
+		<h3> Idiap Research Institute, Martigny, Switzerland </h3>
+		<h3> École Polytechnique Fédérale de Lausanne, Switzerland </h3>
 	</div>
 
 <div class="center-justified">
@@ -295,9 +296,10 @@
 <!--		<iframe width="560" height="315" src="https://www.youtube.com/embed/J1j0ApREFn8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 
 
-	<h2 class="Tracking results" style="text-align: left;">Overview of the proposed method</h2>
+	<h2 class="Tracking results" style="text-align: left;">Overview</h2>
 		<P>
-			In stage 1, the model is first pre-trained on the source domain for category-level 6D pose tracking by minimising the supervised loss. In stage 2, we adapt the pre-trained parameters to novel objects using our self-supervised losses.
+			Stage 1. The model is first pre-trained on the source domain for category-level 6D pose tracking by minimising the supervised loss.<br>
+			Stage 2. We adapt the pre-trained parameters to novel objects using our self-supervised losses.
 		</P>
 		<table align="center" style="border:0px;padding-left:0px">
 			<tr>
@@ -404,8 +406,12 @@
 					<td width="30%" style="border:0px;padding:0px" align="center">Categories</td>
 				</tr>
 				<p>
-					<b>Pre-trained results on NOCS-REAL275 dataset</b>. Green bounding boxes present prdicted 6D pose information, and red dots detected 3D keypoints which are visulised in 2D images.
+					<b>Pre-trained results (6D pose tracking, 3D keypoints)</b> on NOCS-REAL275 dataset.
 				</p>
+				<div align="right">
+					<span style="color:#7CFC00">Green bounding boxes</span>: prdicted 6D pose tracking information;  <br>
+					<span style="color:red">Red dots</span>: detected 3D keypoints which are visulised in 2D images.
+				</div>
 				<tr>
 					<td style="border:0px;padding:0px;vertical-align: middle;" align="center"><i>bottle</i></td>
 					<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
@@ -426,9 +432,13 @@
 			<br>
 
 				<p>
-					<b>Adaptation results on our collected dataset</b>. Red bounding box: ground truth; Black bounding box: before adaptation; Green bounding box: after adaptation.
-					We present the three different adaptation settings: without TA, using the 50% sequence for training the rest for testing and using all the sequence for training and testing, which are denoted by a circle, a half circle and a full circle, respectively.
+					<b>Adaptation results on our collected dataset</b>. We present the three different adaptation settings: without TA, using the 50% sequence for training the rest for testing and using all the sequence for training and testing, which are denoted by a circle, a half circle and a full circle, respectively.
 				</p>
+				<div align=right>
+					<span style="color:red">Red bounding box</span>: Ground truth; <br>
+					<span style="color:#00FF00">Green bounding box</span>: Tracking results after adaptation; <br>
+					Black bounding box: Tracking results before adaptation. <br>
+				</div>
 			<table align="center" style="border:0px;padding-left:0px">
 
 				<tr>
@@ -512,8 +522,12 @@
 					<td width="30%" style="border:0px;padding:0px" align="center">Categories</td>
 				</tr>
 				<p>
-					<b>Pre-trained results on NOCS-REAL275 dataset</b>. Green bounding boxes present prdicted 6D pose information, and red dots detected 3D keypoints which are visulised in 2D images.
+					<b>Pre-trained results (6D pose tracking, 3D keypoints)</b> on NOCS-REAL275 dataset.
 				</p>
+				<div align="right">
+					<span style="color:#7CFC00">Green bounding boxes</span>: prdicted 6D pose tracking information;  <br>
+					<span style="color:red">Red dots</span>: detected 3D keypoints which are visulised in 2D images.
+				</div>
 				<tr>
 					<td style="border:0px;padding:0px;vertical-align: middle;" align="center"><i>bowl</i></td>
 					<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
@@ -533,9 +547,13 @@
 			<br>
 
 				<p>
-					<b>Adaptation results on our collected dataset</b>. Red bounding box: ground truth; Black bounding box: before adaptation; Green bounding box: after adaptation.
-					We present the three different adaptation settings: without TA, using the 50% sequence for training the rest for testing and using all the sequence for training and testing, which are denoted by a circle, a half circle and a full circle, respectively.
+					<b>Adaptation results on our collected dataset</b>. We present the three different adaptation settings: without TA, using the 50% sequence for training the rest for testing and using all the sequence for training and testing, which are denoted by a circle, a half circle and a full circle, respectively.
 				</p>
+				<div align=right>
+					<span style="color:red">Red bounding box</span>: Ground truth; <br>
+					<span style="color:#00FF00">Green bounding box</span>: Tracking results after adaptation; <br>
+					Black bounding box: Tracking results before adaptation. <br>
+				</div>
 			<table align="center" style="border:0px;padding-left:0px">
 
 				<tr>
@@ -619,8 +637,12 @@
 					<td width="30%" style="border:0px;padding:0px" align="center">Categories</td>
 				</tr>
 				<p>
-					<b>Pre-trained results on NOCS-REAL275 dataset</b>. Green bounding boxes present prdicted 6D pose information, and red dots detected 3D keypoints which are visulised in 2D images.
+					<b>Pre-trained results (6D pose tracking, 3D keypoints)</b> on NOCS-REAL275 dataset.
 				</p>
+				<div align="right">
+					<span style="color:#7CFC00">Green bounding boxes</span>: prdicted 6D pose tracking information;  <br>
+					<span style="color:red">Red dots</span>: detected 3D keypoints which are visulised in 2D images.
+				</div>
 				<tr>
 					<td style="border:0px;padding:0px;vertical-align: middle;" align="center"><i>camera</i></td>
 					<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
@@ -640,9 +662,13 @@
 			<br>
 
 				<p>
-					<b>Adaptation results on our collected dataset</b>. Red bounding box: ground truth; Black bounding box: before adaptation; Green bounding box: after adaptation.
-					We present the three different adaptation settings: without TA, using the 50% sequence for training the rest for testing and using all the sequence for training and testing, which are denoted by a circle, a half circle and a full circle, respectively.
+					<b>Adaptation results on our collected dataset</b>. We present the three different adaptation settings: without TA, using the 50% sequence for training the rest for testing and using all the sequence for training and testing, which are denoted by a circle, a half circle and a full circle, respectively.
 				</p>
+				<div align=right>
+					<span style="color:red">Red bounding box</span>: Ground truth; <br>
+					<span style="color:#00FF00">Green bounding box</span>: Tracking results after adaptation; <br>
+					Black bounding box: Tracking results before adaptation. <br>
+				</div>
 			<table align="center" style="border:0px;padding-left:0px">
 
 				<tr>
@@ -726,8 +752,12 @@
 					<td width="30%" style="border:0px;padding:0px" align="center">Categories</td>
 				</tr>
 				<p>
-					<b>Pre-trained results on NOCS-REAL275 dataset</b>. Green bounding boxes present prdicted 6D pose information, and red dots detected 3D keypoints which are visulised in 2D images.
+					<b>Pre-trained results (6D pose tracking, 3D keypoints)</b> on NOCS-REAL275 dataset.
 				</p>
+				<div align="right">
+					<span style="color:#7CFC00">Green bounding boxes</span>: prdicted 6D pose tracking information;  <br>
+					<span style="color:red">Red dots</span>: detected 3D keypoints which are visulised in 2D images.
+				</div>
 				<tr>
 					<td style="border:0px;padding:0px;vertical-align: middle;" align="center"><i>can</i></td>
 					<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
@@ -747,9 +777,13 @@
 			<br>
 
 				<p>
-					<b>Adaptation results on our collected dataset</b>. Red bounding box: ground truth; Black bounding box: before adaptation; Green bounding box: after adaptation.
-					We present the three different adaptation settings: without TA, using the 50% sequence for training the rest for testing and using all the sequence for training and testing, which are denoted by a circle, a half circle and a full circle, respectively.
+					<b>Adaptation results on our collected dataset</b>. We present the three different adaptation settings: without TA, using the 50% sequence for training the rest for testing and using all the sequence for training and testing, which are denoted by a circle, a half circle and a full circle, respectively.
 				</p>
+				<div align=right>
+					<span style="color:red">Red bounding box</span>: Ground truth; <br>
+					<span style="color:#00FF00">Green bounding box</span>: Tracking results after adaptation; <br>
+					Black bounding box: Tracking results before adaptation. <br>
+				</div>
 			<table align="center" style="border:0px;padding-left:0px">
 
 				<tr>
@@ -833,8 +867,12 @@
 					<td width="30%" style="border:0px;padding:0px" align="center">Categories</td>
 				</tr>
 				<p>
-					<b>Pre-trained results on NOCS-REAL275 dataset</b>. Green bounding boxes present prdicted 6D pose information, and red dots detected 3D keypoints which are visulised in 2D images.
+					<b>Pre-trained results (6D pose tracking, 3D keypoints)</b> on NOCS-REAL275 dataset.
 				</p>
+				<div align="right">
+					<span style="color:#7CFC00">Green bounding boxes</span>: prdicted 6D pose tracking information;  <br>
+					<span style="color:red">Red dots</span>: detected 3D keypoints which are visulised in 2D images.
+				</div>
 				<tr>
 					<td style="border:0px;padding:0px;vertical-align: middle;" align="center"><i>laptop</i></td>
 					<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
@@ -854,9 +892,13 @@
 			<br>
 
 				<p>
-					<b>Adaptation results on our collected dataset</b>. Red bounding box: ground truth; Black bounding box: before adaptation; Green bounding box: after adaptation.
-					We present the three different adaptation settings: without TA, using the 50% sequence for training the rest for testing and using all the sequence for training and testing, which are denoted by a circle, a half circle and a full circle, respectively.
+					<b>Adaptation results on our collected dataset</b>. We present the three different adaptation settings: without TA, using the 50% sequence for training the rest for testing and using all the sequence for training and testing, which are denoted by a circle, a half circle and a full circle, respectively.
 				</p>
+				<div align=right>
+					<span style="color:red">Red bounding box</span>: Ground truth; <br>
+					<span style="color:#00FF00">Green bounding box</span>: Tracking results after adaptation; <br>
+					Black bounding box: Tracking results before adaptation. <br>
+				</div>
 			<table align="center" style="border:0px;padding-left:0px">
 
 				<tr>
@@ -940,8 +982,12 @@
 					<td width="30%" style="border:0px;padding:0px" align="center">Categories</td>
 				</tr>
 				<p>
-					<b>Pre-trained results on NOCS-REAL275 dataset</b>. Green bounding boxes present prdicted 6D pose information, and red dots detected 3D keypoints which are visulised in 2D images.
+					<b>Pre-trained results (6D pose tracking, 3D keypoints)</b> on NOCS-REAL275 dataset.
 				</p>
+				<div align="right">
+					<span style="color:#7CFC00">Green bounding boxes</span>: prdicted 6D pose tracking information;  <br>
+					<span style="color:red">Red dots</span>: detected 3D keypoints which are visulised in 2D images.
+				</div>
 				<tr>
 					<td style="border:0px;padding:0px;vertical-align: middle;" align="center"><i>mug</i></td>
 					<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
@@ -961,9 +1007,13 @@
 			<br>
 
 				<p>
-					<b>Adaptation results on our collected dataset</b>. Red bounding box: ground truth; Black bounding box: before adaptation; Green bounding box: after adaptation.
-					We present the three different adaptation settings: without TA, using the 50% sequence for training the rest for testing and using all the sequence for training and testing, which are denoted by a circle, a half circle and a full circle, respectively.
+					<b>Adaptation results on our collected dataset</b>. We present the three different adaptation settings: without TA, using the 50% sequence for training the rest for testing and using all the sequence for training and testing, which are denoted by a circle, a half circle and a full circle, respectively.
 				</p>
+				<div align=right>
+					<span style="color:red">Red bounding box</span>: Ground truth; <br>
+					<span style="color:#00FF00">Green bounding box</span>: Tracking results after adaptation; <br>
+					Black bounding box: Tracking results before adaptation. <br>
+				</div>
 			<table align="center" style="border:0px;padding-left:0px">
 
 				<tr>
