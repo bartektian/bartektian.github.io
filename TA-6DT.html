@@ -152,15 +152,15 @@
 	<div class="center-justified">
 		<p>
 				<b>ABSTRACT:</b> We propose a test-time adaptation for 6D object pose tracking that learns to adapt a pre-trained model to track the 6D pose of novel objects.
-								Considering the problem of 6D object pose tracking as a 3D keypoint detection and matching task, we first present a model that extracts 3D keypoints.
-								Given an RGB-D image and the mask of a target object for each frame, the proposed model consists of the self- and cross-attention modules to produce
-								the features that aggregate the information within and across frames, respectively. By using the keypoints detected from the features for each frame,
-								we estimate the pose changes between two consecutive frames, which enables 6D pose tracking when the 6D pose of a target object in the initial frame is given.
-								Our model is first trained  in a source domain, where the ground truth 6D pose of the object is available to perform category-level tracking.
-			                    To deploy this pre-trained model to perform the tracking of novel objects, we present a test-time adaptation strategy that trains the model to adapt to the target
-								novel object by self-supervised learning. Given an RGB-D video sequence of the novel object, the proposed self-supervised losses encourage the model to estimate the
-								6D pose changes that can keep the photometric and geometric consistency of the object. We validate our method on the NOCS-REAL275 dataset and our collected dataset,
-								and the results show the advantages of tracking novel objects.
+								 We consider the problem of 6D object pose tracking as a 3D keypoint detection and matching task and present a model that extracts 3D keypoints.
+								 Given an RGB-D image and the mask of a target object for each frame, the proposed model consists of the self- and cross-attention modules to produce
+								 the features that aggregate the information within and across frames, respectively. By using the keypoints detected from the features for each frame,
+								 we estimate the pose changes between two consecutive frames, which enables 6D pose tracking when the 6D pose of a target object in the initial frame is given.
+							     Our model is first trained in a source domain, a category-level tracking dataset where the ground truth 6D pose of the object is available.
+								 To deploy this pre-trained model to track novel objects, we present a test-time adaptation strategy that trains the model to adapt to the target novel object by
+								 self-supervised learning. Given an RGB-D video sequence of the novel object, the proposed self-supervised losses encourage the model to estimate the 6D pose changes
+								 that can keep the photometric and geometric consistency of the object.
+			                     We validate our method on the NOCS-REAL275 dataset and our collected dataset, and the results show the advantages of tracking novel objects.
         </p>
 
 		<br>
@@ -171,11 +171,10 @@
 		<img width=1000 src="TTA_framework/framework.jpeg">
 	</div>
 		<p>
-					The proposed framework for keypoints detection. In data processing, we crop RGB images and depth images using semantic mask information
-					and lift cropped depth to the point cloud. In 3D keypoint detection, we extract the fused appearance and geometric features of the target
-					object from the cropped RGB and the target point cloud. Subsequently, we utilise self-attention and cross-attention to enhance points
-					features and obtain more distinguished intra-frame and inter-frame features. Following, we combine points features into one global feature
-					using a multilayer perceptron (MLP) layer and the 3D keypoints are estimated through a fully connected (FC) layer.
+					The proposed framework for keypoints detection. In the data processing, we first crop RGB and depth images using the object mask and lift cropped depth to the point cloud.
+					In the 3D keypoint detection, we extract the fused appearance and geometric features from the cropped RGB and the point cloud of the target object. We then utilise self-attention
+					and cross-attention to aggregate intra-frame and inter-frame features. The output points features are then processed through an encoder to generate a global feature that is used as
+					input for a fully connected (FC) layer to estimate the 3D keypoints.
 		</p>
 
 
