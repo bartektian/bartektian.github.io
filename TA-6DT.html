@@ -1091,11 +1091,12 @@
     }
     </script>
 
+	<section id="sectionF">
 	<h2 class="Limitations" style="text-align: left;">Limitations</h2>
 		<P>
 			To verifiy our model limitations, we do another two experiments: 6D pose tracking under occlusions and 6D pose tracking with lighting change
 		</P>
-		<b>Occlusions</b> <P> We re-take a video where the occlusion happens, and re-take a video where the lighting changes </P>
+		<b>Occlusions</b> <P> We re-take two videos: one contains the occlusion happens, one contains lighting changes </P>
 		<table align="center" style="border:0px;padding-left:0px">
 			<tr>
 				<th>
@@ -1136,6 +1137,21 @@
 		<P>
 			To verifiy the  impact of the robot arm motion trajectory on the results, we do an experiments: change the trajectory
 		</P>
+		</section>
+
+	<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Parse the URL to check for the jumpToPart parameter
+            var url = new URL(window.location.href);
+            var jumpToPart = url.searchParams.get("To");
+
+            // If the jumpToPart parameter is set to "F", scroll to sectionF
+            if (jumpToPart === "limitations") {
+                document.getElementById("sectionF").scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    </script>
+
 
 <section class="hero">
   <div class="hero-body">
