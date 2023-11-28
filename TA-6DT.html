@@ -3,7 +3,7 @@
 <head>
 
 	<meta charset="UTF-8">
-	<title>Test-time Adaptation 6D Pose Tracking</title>
+	<title>Test-time Adaptation for 6D Pose Tracking</title>
 
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -136,7 +136,7 @@
 
 <body>
 	<div class="center-justified" style="width:1000px;">
-		<h1>Test-time Adaptation 6D Pose Tracking</h1>
+		<h1>Test-time Adaptation for 6D Pose Tracking</h1>
 		<h2>Long Tian, Changjae Oh, Andrea Cavallaro</h2>
 		<h3> Centre for Intelligent Sensing, Queen Mary University of London, United Kingdom </h3>
 		<h3> Idiap Research Institute, Martigny, Switzerland </h3>
@@ -1091,29 +1091,44 @@
     }
     </script>
 
+	<br>
+	<br>
 	<section id="sectionF">
 	<h2 class="Limitations" style="text-align: left;">Limitations</h2>
+	<p>
+		We captured three videos to evaluate our model performance under different conditions: one showcasing occlusions, another undergoing lighting changes, and a third utilizing a new trajectory.
+	</p>
 
-		<table align="center" style="border:0px;padding-left:0px">
-			<tr>
-				<th>
-					<td width="40%" style="border:0px;padding:0px" align="center">Occlusions </td>
-				</th>
-				<th>
-					<td width="40%" style="border:0px;padding:0px" align="center">Lighting changes </td>
-				</th>
-				<th>
-					<td width="40%" style="border:0px;padding:0px" align="center">New Trajectory </td>
-				</th>
-			</tr>
+	<b>
+		Occlusions
+	</b>
+	<div style="text-align: center;">
+		<video width="550" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/New_data/occlusion.mp4" type="video/mp4" >Your browser does not support the video tag.
+		</video>
+	</div>
 
+
+
+	<br>
+	<br>
+
+	<b>
+		New trajectory
+	</b>
+	<div style="text-align: center;">
+		<video width="550" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/New_data/new_trajectory.mp4" type="video/mp4" >Your browser does not support the video tag.
+		</video>
+	</div>
+
+
+		<br>
+	<br>
+
+		<b>Lighting changes.</b> <p>It comprises two segments: normal lighting and low-light condition. We conducted two experiments: <br>
+		    1) Training with normal images and testing with low-light images;<br>
+		    2) Employing all frames for training and testing</p>
+	<table align="center" style="border:0px;padding-left:0px">
 			<tr>
-				<th>
-				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
-					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/New_data/occlusion.mp4" type="video/mp4" >Your browser does not support the video tag.
-					</video>
-				</td>
-				</th>
 				<th>
 				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
 					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/New_data/1_light_off.mp4" type="video/mp4" >Your browser does not support the video tag.
@@ -1122,18 +1137,36 @@
 				</th>
 				<th>
 				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
-					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/New_data/new_trajectory.mp4" type="video/mp4" >Your browser does not support the video tag.
+					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/New_data/1_light_off_half_half.mp4" type="video/mp4" >Your browser does not support the video tag.
+					</video>
+				</td>
+				</th>
+				<th>
+				<td style="border:0px;padding:0px 0px 10px 0px;vertical-align: middle;" align="center">
+					<video width="350" controls autoplay muted loop style="vertical-align: middle;"><source src="TTA_videos/New_data/1_light_off_all.mp4" type="video/mp4" >Your browser does not support the video tag.
 					</video>
 				</td>
 				</th>
 			</tr>
+
+			<tr>
+				<th>
+					<td width="30%" style="border:0px;padding:0px" align="center">The lighting changes video</td>
+				</th>
+				<th>
+					<td width="30%" style="border:0px;padding:0px" align="center">Experiment 1</td>
+				</th>
+				<th>
+					<td width="30%" style="border:0px;padding:0px" align="center">Experiment 2</td>
+				</th>
+			</tr>
 		</table>
 
-		<br>
-		<br>
+	<br>
+	<br>
 
 
-		</section>
+	</section>
 
 	<script>
         document.addEventListener("DOMContentLoaded", function() {
